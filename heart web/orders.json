@@ -1,0 +1,22 @@
+[
+  {
+    "orderId": 100,
+    "status": "none",
+    "customerId": "a15bfbf3-da14-4001-af69-a9eb924c6caf",
+    "deliveryOption": "2",
+    "orderItems": [
+      {
+        "productId": "Item-0003",
+        "quantity": 3,
+        "deliveryOptionId": "1",
+        "addUpId": "0"
+      },
+      {
+        "productId": "Item-0002",
+        "quantity": 1,
+        "deliveryOptionId": "1",
+        "addUpId": "0"
+      }
+    ]
+  }
+]

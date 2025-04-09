@@ -1,0 +1,41 @@
+
+
+
+
+
+ .pre-btn,
+.next-btn{
+    border: none;
+    width: 50px;
+    height: 15px;
+    position: absolute;
+    margin-top: 60px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(253, 248, 234);
+    cursor: pointer;
+    z-index: 9;} 
+
+    .pre-btn{
+        left: 0;
+        transform: rotate(180eg);
+    }
+    .next-btn{
+        right: 0;
+
+    }
+    .pre-btn img,
+    .next-btn img{
+        opacity: 0.2;
+
+    }
+    .pre-btn:hover img,
+    .next-btn:hover img{
+        opacity: 1;
+        
+    }
+
+
+    

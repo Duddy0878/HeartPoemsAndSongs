@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: brown;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#modal-open{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    /* transition background:  6s; */
+}
+
+#modal-open , input[type='submit']{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: blue;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: black;
+}
+#modal-open:hover{
+  background: bisque;
+}
+
+#contact-modal{
+   display: none;
+   position: fixed;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.3);
+}
+
+ #modal-content{
+     background: green;
+     margin: 35px auto;
+     width: 60%;
+     box-shadow: 4px 4px 5px rgba(0,0,0,0.3);
+     animation-name: modalSlideUp;
+     animation-duration: 1s;
+}
+
+#modal-header{
+    background: khaki;
+    color: white;
+    padding: 25px, 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#modal-header .close-modal{
+    font-size: 50px;
+    float: right;
+}
+
+#modal-header .close-modal:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#modal-footer{
+    background: lightcyan;
+    color: aquamarine;
+    padding: 25px,30px;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+#modal-body{
+    padding: 25px 30px;
+
+}
+
+#modal-body .h3{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.form-group{
+    width: 75%;
+    margin: 20px 0;
+    margin-left: 12.5;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-group input, textarea{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input[type='submit']{
+    font-size: 20px;
+    margin-bottom: 30px;
+    width: 75%;
+    margin-left: 12.5%;
+    transition: backround 0.3s;
+}
+
+.input[type='submit']:hover{
+    background: palevioletred;
+}
+
+@keyframes modalSlideUp{
+    0%{
+        transform:  translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

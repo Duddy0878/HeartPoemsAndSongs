@@ -1,0 +1,449 @@
+*{
+  margin-bottom: 0px;
+}
+
+
+
+
+body{
+    background-color: rgb(253, 248, 234);
+    
+}
+
+p,
+h1{
+    color: rgb(186, 162, 131);
+}
+
+
+
+.item-view{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 150px;
+    
+    
+}
+
+.item-view-item{
+   margin-left: 15px;
+   height: 650px;
+}
+
+
+.price-side{
+  height: 550px;
+}
+  .item-image{
+    width: 650px;
+    height: 415px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .item-name{
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  .item-comment{
+    color: rgb(186, 162, 131);
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .item-rateImage{
+    width: 100px;
+  }
+
+
+
+.item-view-price{
+    width: 500px;
+    height: 400px;
+    margin-left: 100px;
+    margin-top: 80px;
+    border: solid ;
+    border-width: 2px;
+    border-color: rgb(186, 162, 131);
+
+    display: grid;
+    /* justify-items: center; */
+    position: relative;
+  
+}
+   
+  .devide-price{
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    color: rgb(186, 162, 131);
+    font-size: 20px;
+  }
+
+  .price-header{
+    margin-top: 50px;
+  }
+
+  .price-header::before{
+    content: '';
+
+    background-color: rgb(186, 162, 131);
+    width: 400px;
+    height: 1px;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    right: 40px;
+  }
+
+
+  .left-side-header{
+    font-size: 30px;
+    margin-left: 20px;
+    
+  }
+
+  .right-side-header{
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .add-upgrade{
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+    color: rgb(186, 162, 131);
+    border: none;
+
+    font-size: 15px;
+  }
+
+  .add-upgrade:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.17);
+  }
+
+  .total{
+    text-align: center;
+    color: rgb(186, 162, 131);
+    font-size: 30px;
+    
+  }
+
+  .total::before{
+    content: '';
+
+    color: rgb(186, 162, 131);
+    width: 210px;
+    height: 50px;
+    position: absolute;
+    top: 320px;
+    bottom: 0;
+    right: 145px;
+
+   
+    border: solid;
+    border-width: 1px;
+    border-right: 0;
+    border-left: 0;
+
+  }
+
+  .b-add{
+    margin-left: 170px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  .b-add-cart{  
+                      
+    width: 250px;
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 10px;
+    background-color: rgb(253, 248, 234);
+    border-radius: 100px;
+    border-style: solid;
+    border-color:rgb(186, 162, 131) ;
+    border-width: 2px;
+    box-shadow: inset 1px 1px 1px
+    rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(186, 162, 131);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.b-add-cart:hover{
+    font-weight: 600;
+    font-size: 25px;
+    border-width: 2px;
+    box-shadow: inset 1px 3px 6px
+    rgba(0, 0, 0, 0.6);
+}
+
+.viewlink{
+  text-decoration: none;
+}
+
+.upgrade-header{
+  color: rgb(186, 162, 131);
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.board-container{
+  margin-right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.upgrade-sample-boared{
+  position: relative;
+  width: 600px;
+  height: 350px;
+}
+
+
+
+
+.board{
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.board-img{
+  border-style: double;
+  border-color: rgb(186, 162, 131);
+  border-radius: 2px;
+  border-width: 2px;
+  width: 596px;
+  height: 344px;
+  position: absolute;
+  object-fit: cover;
+  
+  
+}
+
+span.next, span.pre{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: rgb(186, 162, 131); 
+  background-color: rgba(0, 0, 0, 0.17);
+  font-size: 25px;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+span.next{
+  right: 20px;
+}
+
+span.pre{
+  left: 20px;
+}
+
+span.next:hover, span.pre:hover{
+  background-color: white;
+  opacity: 0.8;
+  
+}
+
+.metal-img{
+  border-style: double;
+  border-color: rgb(186, 162, 131);
+  border-radius: 2px;
+  border-width: 2px;
+  margin-bottom: 0;
+  width: 596px;
+  height: 346px;
+}
+
+
+
+
+.upgrade-board,
+.upgrade-metal,
+.upgrade-hinge{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  /* background-color: #eaeaea; */
+  margin-top: 200px;
+  margin-left: 50px;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.hinge-text{
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.name-up{
+  color: rgb(186, 162, 131);   
+  font-size: 40px;   
+}
+
+.price-up{
+  color: rgb(186, 162, 131);
+  font-size: 20px;
+  margin-left: 4px;
+  margin-top: 7px;
+  margin-bottom: 70px;
+}
+
+.text-up{
+  color: rgb(186, 162, 131);
+  font-size: 25px;
+  margin-left: 4px;
+  /* margin-top: 100px; */
+  margin-bottom: 30px;
+  
+}
+
+.text-size{
+  color: rgb(186, 162, 131);
+  font-size: 25px;
+  margin-left: 4px;
+  /* margin-top: 100px; */
+  margin-bottom: 30px;
+  
+  
+}
+
+.text-size2{
+  color: rgb(186, 162, 131);
+  font-size: 30px;
+  
+  /* margin-top: 100px; */
+  margin-bottom: 30px;
+  
+  
+}
+
+.text-size3{
+  color: rgb(186, 162, 131);
+  font-size: 25px;
+  margin-left: 20px;
+  /* margin-top: 100px; */
+  margin-bottom: 30px;
+  
+  
+}
+
+
+
+
+
+.message-link{
+  width: 20px;
+  position: relative;
+
+  
+  
+}
+
+.message-link::before{
+  opacity: 0;
+  content: 'Send us a message';
+  color: rgb(186, 162, 131);
+  font-size: 15px;
+  text-shadow: 1px 3px 1px rgba(0, 0, 0, 0.17);
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+
+  left: 40px;
+  top: 5px;
+  
+}
+
+.message-link:hover::before{
+  opacity: 1;
+}
+
+.message-img{
+  width: 20px;
+  margin-left: 10px;
+  position: absolute;
+  top: 5px;
+}
+
+
+
+
+.hinge-video{
+  border-style: double;
+  border-color: rgb(186, 162, 131);
+  border-radius: 2px;
+  border-width: 2px;
+  margin-bottom: 0;
+  
+  width: 600px;
+  
+
+}
+
+@keyframes next1{
+  from{
+      left: 0%;
+  }
+  to{
+      left: -100%;
+  }
+}
+
+@keyframes next2{
+  from{
+      left: 100%;
+  }
+  to{
+      left: 0%;
+  }
+}
+
+@keyframes pre1{
+  from{
+      left: 0%;
+  }
+  to{
+      left: 100%;
+  }
+}
+
+@keyframes pre2{
+  from{
+      left: -100%;
+  }
+  to{
+      left: 0%;
+  }
+}
+
+ 
+  

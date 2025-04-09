@@ -1,0 +1,402 @@
+body::-webkit-scrollbar{
+     display: none;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(253, 248, 234);
+    margin-bottom: 30px;
+    
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 5px;
+    box-shadow: 4px 4px 3px
+    rgba(0, 0, 0, 0.4);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+
+    z-index: 10;
+    
+    
+    
+}
+
+nav{
+    
+   margin-left: 0; 
+}
+
+nav ul{
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+nav li{
+    height: 30px;
+}
+
+nav a{
+    height: 100%;
+    /* padding:  0 30px; */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+nav a:hover{
+   cursor: pointer;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.side-bar{
+    padding: 40px;
+    position: fixed;
+    top: 140px;
+    left: 0;;
+    height: 50vh;
+    width: 220px;
+    z-index: 900;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.side-bar li:first-child{
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 270px;
+    margin-top: 0;
+
+
+}
+
+.close-sidebar{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.sidebar-h{
+    font-size: 25px;
+    margin-bottom: 0px;
+    position: relative;
+
+
+}
+
+.sidebar-h::before{
+    position: absolute;
+    content: '';
+    background: black;
+    border: none;
+    width: 100px;
+    height: 1px;
+    top: 50px;
+    
+}
+
+.first-side{
+    margin-top: 30px;
+}
+
+
+.side-bar li{
+    width: 100%;
+    font-size: 20px;
+    
+   
+}
+
+.side-bar a{
+    width: 100%;
+    color:black;
+}
+
+.side-bar a:hover{
+    color: rgb(191, 159, 118);
+}
+
+.checkouthedaer{
+    
+    color: rgb(191, 159, 118);
+    font-size: 25px;
+}
+
+.header-right
+{
+    display: flex;
+    flex-direction: row;
+    width: 400px; 
+    align-items: center; 
+   
+   
+}
+    .menu{
+        width: 40px;
+        margin-left: 25px;
+    }
+
+   
+
+    .logo{
+        width: 90px;
+        margin-top: 15px;
+        margin-left: 30px;
+    
+    }
+    .heart-head{
+     width: 150px;
+     margin-top: 0px;
+    }
+.header-middle
+{
+  
+}  
+   
+.header-left
+{
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 5px;
+    max-width: 500px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+    
+}
+.search-bar{
+    flex: 1;
+    height: 36px;
+    margin-right: 50px;
+    padding-left: 10px;
+    background-color: rgb(253, 248, 234);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(191, 159, 118);
+    border-radius: 3px;
+    box-shadow: inset 1px 2px 2px
+    rgba(0, 0, 0, 0.3)
+    }
+.search-bar::placeholder{
+font-family: 'Times New Roman', Times, serif;
+font-size: 16px;
+color: rgb(191, 159, 118);
+}
+.search-button{
+height: 39px; 
+width: 30px; 
+background-color: rgb(253, 248, 234);
+border-width: 0px;
+border-style: solid;
+border-color: lightgrey;
+margin-left: 0px;
+margin-right: 20px;
+
+
+}
+.search-button-img{
+width: 25px;
+margin-top: 4px;
+margin-left: 0px;
+}
+.checkout-header{
+    display: block;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.checkout-icon{
+    width: 100px;
+    margin-right: 20px;
+  
+}
+
+.acount-icon{
+    width: 60px;
+    margin-right: 20px;
+}
+
+.acount-icon:hover{
+    cursor: pointer;
+}
+.checkout-quantity{
+    color: rgb(191, 159, 118);
+    font-size: 25px;
+    position: absolute;
+    font-weight: 700;
+    top: 20px;
+    left: 42px;
+    width: 26;
+    text-align: center;
+
+}
+.checkout-text{
+    color: rgb(191, 159, 118);
+    font-size: 18px;
+    position: absolute;
+    font-weight: 700;
+    top: 40px;
+    left: 42px;
+    width: 26;
+    text-align: center;
+    margin-left: 35px;
+}
+
+.acount{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    background: rgba(6, 0, 0, 0.05);
+}
+
+.modalAcount{
+    position: absolute;
+    left: 470px;
+    top: 200px;
+    
+    background: rgb(253, 248, 234);
+    display: grid;
+    grid-template-columns: 250px 250px;
+    border: 1px solid rgb(191, 159, 118);
+    width: 500px;
+    height: 400px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    animation-name: modalSlideSide;
+    animation-duration: 2s;
+}
+
+.formAcount{
+    width: 200px;
+    display: grid;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.formAcount input{
+
+    color: rgb(191, 159, 118);
+    padding: 6px;
+    border: solid rgb(191, 159, 118) 1px;
+    border-radius: 3px;
+
+}
+
+.formAcount button{
+    justify-self: center;
+    width: 150px;
+    background: transparent;
+    color: rgb(191, 159, 118);
+    padding: 6px;
+    border: solid rgb(191, 159, 118) 1px;
+    border-radius: 2px;
+    cursor:pointer;
+}
+
+.formAcount button:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.acountTxt{
+    color: rgb(191, 159, 118);
+    font-family: "Delius Swash Caps", cursive;
+    font-size: 12px;
+    text-align: center;
+}
+
+.acountHeart{
+    width: 200px;
+    margin-left: 20px;
+}
+
+.acountH{
+   /* text-align: center;
+   color: rgb(191, 159, 118);
+   font-size: 20px; */
+   margin: 0;
+   margin-right: 15px;
+}
+
+.oneClick{
+    color: rgb(191, 159, 118);
+    font-family: "Delius Swash Caps", cursive;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.acontleftside{
+    position: relative;
+    margin-top: 80px;
+    
+}
+
+.acontleftside .click{
+    position: absolute;
+    top: 60px;
+    left: 170px;
+    width: 28px;
+    animation: clickZoom 3s;
+
+}
+
+.formx{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+   
+    cursor: pointer;
+}
+
+@keyframes modalSlideSide{
+    0%{
+        transform: rotate(60deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes clickZoom{
+    0%{
+     width: 200px; 
+    }
+
+    100%{
+     width: 28px;
+    }
+}
+

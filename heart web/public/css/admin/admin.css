@@ -1,0 +1,136 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.adminPage{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    padding: 5px;
+    padding-right: 20px;
+}
+
+
+.left-side{
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.popUpTxt{
+    text-decoration: none;
+    color: rgb(186, 162, 131);
+}
+
+
+.left-containers{
+    width: 350px;
+    height: 200px;
+    /* border: solid 2px rgb(191, 159, 118); */
+    border-radius: 20px;
+    background-color: rgb(253, 248, 234);
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+.left-containers:hover{
+    width: 355px;
+}
+
+.left-link{
+    text-decoration: none;
+}
+
+
+.left-text{
+    font-family: "Delius Swash Caps", cursive;
+    font-size: larger;
+    color: rgb(186, 162, 131);
+    text-align: center;
+     padding-top: 70px;
+
+}
+
+/* right side */
+
+.right-side{
+    width: 100%;
+    background-color: rgb(253, 248, 234);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+    
+
+}
+
+.board-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    position: relative;
+    
+}
+
+.todayDate{
+    justify-self: center;
+    font-family: "Delius Swash Caps", cursive;
+    font-size: larger;
+    color: rgb(186, 162, 131);
+    text-align: center;
+}
+
+.BheaderRight{
+    display: flex;
+    gap: 20px;
+    justify-self: end;
+    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.homeHead{
+    margin-left: 20px;
+}
+
+.boardFacts{
+    display: flex;
+    gap: 30px;
+    color: rgb(186, 162, 131);
+    font-size: 20px;
+    font-family: "Delius Swash Caps", cursive;
+    margin-top: 450px;
+    margin-left: 60px;
+}
+
+.ordersFact,
+.productsFact,
+.emailFacts{
+    border: solid 1px rgb(186, 162, 131);
+    border-radius: 20px;
+    padding: 20px;
+   
+    position: relative;
+    width: 106px;
+    text-align: center;
+}
+
+.symble{
+  position: absolute;
+  top: -10px;
+  left: 5px;
+}
+
+.symble2{
+    position: absolute;
+    top: -17px;
+    left: -3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+    background-color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 50px;
+
+  }

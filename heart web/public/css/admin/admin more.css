@@ -1,0 +1,56 @@
+.left-side{
+    
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    
+}
+
+.left-containers{
+    position: relative;
+    height: 180px;
+    /* border: solid 2px rgb(191, 159, 118); */
+    border-radius: 20px;
+    background-color: rgb(253, 248, 234);
+    margin-bottom: 0px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.06);
+}
+
+
+
+.left-link{
+    text-decoration: none;
+}
+
+
+.left-text{
+    font-family: "Delius Swash Caps", cursive;
+    font-size: larger;
+    color: rgb(186, 162, 131);
+    text-align: center;
+     padding-top: 70px;
+
+}
+
+.left-containers:hover{
+    background-color: rgb(186, 162, 131);
+    
+  }
+
+.left-containers::before{
+    position: absolute;
+    content: attr(data-gallary);
+    font-family: "Delius Swash Caps", cursive;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    padding-left: 160px;
+    opacity: 0;
+}
+
+.left-containers:hover::before{
+ opacity: 1;
+}
+
