@@ -1,10 +1,17 @@
 import { viewTheItem } from "./view each item/product view.js";
 import { viewThePrice } from "./view each item/upgrade view.js";
+import { fetchProducts } from "./products.js";
+
+fetchProducts()
+  .then(() => {
 
 viewTheItem();
 viewThePrice();
 
-
+  })
+  .catch((error) => {
+    console.error("Error fetching products:", error);
+  });
 
 
 

@@ -83,6 +83,15 @@ acountClose.addEventListener('click', () => {
 let formIn = document.querySelector('.formAcount')
 let emailIn = document.getElementById('emailIn');
 let passwordIn = document.getElementById('passwordIn');
+ 
+let toLogIn = document.querySelector('.toLogIn');
+let toSignUp = document.querySelector('.toSignUp')
+let formLogin = document.querySelector('.formAcount6');
+let nameLog = document.getElementById('nameLog')
+let passwordLog = document.getElementById('passwordLog')
+let emailLog = document.getElementById('emailLog')
+
+// === sign in
 
 window.addEventListener('beforeunload', () => {
     
@@ -114,24 +123,21 @@ formIn.addEventListener('submit', (e) => {
         }
    
     })
+    if(acountInfo != null){
     sessionStorage.setItem('user', JSON.stringify(acountInfo.acountId));
 
-    
-  
-
     Swal.fire({
-        title: `Hi ${acountInfo.userName}`,
-        icon: "success",
-        showConfirmButton: false,
-        timer: 1800,
-        color: "#c2a579",
-        background: '#fdf8ea'
+      title: `Hi ${acountInfo.userName}`,
+      icon: "success",
+      showConfirmButton: false,
+      timer: 1800,
+      color: "#c2a579",
+      background: '#fdf8ea'
     })
-    
 
-      document.querySelector('.checkout-header')
-      .style.display = 'flex'
-   
+    document.querySelector('.checkout-header')
+    .style.display = 'flex'
+ 
     emailIn.value = '';
     passwordIn.value = '';
     modalAcount.style.display = 'none'
@@ -140,8 +146,53 @@ formIn.addEventListener('submit', (e) => {
     updateCartQuantity();
     location.reload()
     displayName()
-}
+    }
+    else{
+        Swal.fire({
+            title: "Wrong email or password",
+            icon: "error",
+            showConfirmButton: false,
+            timer: 1800,
+            color: "#c2a579",
+            background: '#fdf8ea'
+          })
+    }
+    
+    }
+    })
+
+
+// ========== sign up
+
+toLogIn.addEventListener('click', (e) => {
+    e.preventDefault()
+    formLogin.style.display = 'grid'
+    formIn.style.display = 'none'
+
+});
+
+formLogin.addEventListener('submit', (e) => {
+    e.preventDefault()
+    console.log(nameLog);
+    
+   acounts.push({
+    acountId: crypto.randomUUID(),
+    userName: nameLog.value,
+    email: emailLog.value,
+    password: passwordLog.value,
+
+   })
+    
+    saveToAcountsStorage(acounts);
+    
 })
+
+toSignUp.addEventListener('click', (e) => {
+  e.preventDefault()
+  formLogin.style.display = 'none'
+  formIn.style.display = 'grid'
+
+});
 
 }
 
