@@ -421,7 +421,7 @@ document.querySelectorAll('.removeAdd')
   link.addEventListener('click',() => {
 
       const productId = link.dataset.removeId
-      removeFromProducts(productId, products);
+      removeFromProducts(productId);
 
 
       const container = 
