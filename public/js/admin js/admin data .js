@@ -207,7 +207,7 @@ function addCategorys () {
 
   categorys.push(pushCate.value)
 
-  saveToCategorysStorage();
+  saveToCategorysStorage(categorys);
 }
 
 categorySelect();
