@@ -1,4 +1,11 @@
 
+(function(){
+    emailjs.init({
+      publicKey: "3ey-EZDUHNx-7l4Aa",
+    });
+ })();
+
+
 // slide product-card
 
 let slideImageBtn = document.querySelectorAll('.product-card')
