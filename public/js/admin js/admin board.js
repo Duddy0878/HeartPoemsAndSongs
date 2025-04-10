@@ -27,19 +27,25 @@ openSuport2.addEventListener('click',function(){
 
 let today = dayjs();
 
+
+
 var x = setInterval(function () {
     const dateString = today.format(
         'dddd, MMMM D'
       );
+   const smalldate = today.format('M/D');
     
       let currentDate = new Date();
       let am_pm = currentDate.toLocaleTimeString([], {hour: 'numeric', minute:'2-digit'});
     
-       
-    
-     let dateHtml = `&emsp; &emsp;${dateString} &emsp; &emsp; ${am_pm} `
-    
-     document.querySelector('.todayDate')
+      let dateHtml =`` 
+      if(window.innerWidth > 500){
+      dateHtml = `&emsp; &emsp;${dateString} &emsp; &emsp; ${am_pm} `
+      }
+      else{
+      dateHtml = `${smalldate}-${am_pm}`
+      }
+      document.querySelector('.todayDate')
       .innerHTML = dateHtml
 })
 

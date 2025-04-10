@@ -1,6 +1,12 @@
+ {
+    
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
+
+
 
 
 .adminPage{
@@ -9,6 +15,8 @@ body::-webkit-scrollbar{
     padding: 5px;
     padding-right: 20px;
 }
+
+
 
 
 .left-side{
@@ -134,3 +142,42 @@ body::-webkit-scrollbar{
     border-radius: 50px;
 
   }
+
+  @media (max-width: 500px) {
+    .adminPage {
+     display: flex; 
+     flex-direction: column; 
+     padding: 5px;
+     padding-right: 20px;
+    } 
+    .right-side {
+         order: -1; 
+         width: 90%;
+         margin-left: 15px;
+        }
+
+    .left-side {
+        width: 90%;
+        margin-top: 10px;
+    }
+     .left-containers{
+      width: 100%;
+      height: 50px;
+      
+      }
+      .left-text{
+        padding-top: 10px;
+      }
+
+      .todayDate{
+        margin-top: 5px;
+        justify-self: center;
+        font-family: "Delius Swash Caps", cursive;
+        font-size: 15px;
+        color: rgb(186, 162, 131);
+        text-align: center;
+    }
+    .boardFacts{
+        margin-left: 10px;
+    }
+   }
