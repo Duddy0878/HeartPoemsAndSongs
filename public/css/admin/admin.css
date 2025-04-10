@@ -152,7 +152,7 @@ body::-webkit-scrollbar{
     } 
     .right-side {
          order: -1; 
-         width: 100%;
+         width: 450px;
          margin-top: 10px;
         }
 
@@ -195,7 +195,7 @@ body::-webkit-scrollbar{
         padding: 5px;
        
         position: relative;
-        width: 16px;
+        width: 100px;
         text-align: center;
     }
    }
