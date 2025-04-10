@@ -178,6 +178,24 @@ body::-webkit-scrollbar{
         text-align: center;
     }
     .boardFacts{
+        display: flex;
+        gap: 30px;
+        color: rgb(186, 162, 131);
+        font-size: 20px;
+        font-family: "Delius Swash Caps", cursive;
+        margin-top: 450px;
         margin-left: 10px;
+    }
+    
+    .ordersFact,
+    .productsFact,
+    .emailFacts{
+        border: solid 1px rgb(186, 162, 131);
+        border-radius: 20px;
+        padding: 5px;
+       
+        position: relative;
+        width: 16px;
+        text-align: center;
     }
    }
