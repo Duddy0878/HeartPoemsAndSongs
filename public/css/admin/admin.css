@@ -152,8 +152,8 @@ body::-webkit-scrollbar{
     } 
     .right-side {
          order: -1; 
-         width: 90%;
-         margin-left: 15px;
+         width: 100%;
+         
         }
 
     .left-side {
