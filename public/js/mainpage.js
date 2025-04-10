@@ -1,9 +1,5 @@
 
-(function(){
-    emailjs.init({
-      publicKey: "3ey-EZDUHNx-7l4Aa",
-    });
- })();
+
 
 
 // slide product-card
@@ -115,3 +111,8 @@ next.addEventListener('click', slideNext)
     document.getElementById("seconds").innerHTML = seconds;
 
   } ,1000);
+
+
+  
+
+

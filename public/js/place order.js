@@ -1,11 +1,14 @@
-import { orders, saveToOrdersStorage } from "./orders.js";
+import { orders, saveToOrdersStorage , fetchOrders} from "./orders.js";
 import {cart} from "../js/cart.js";
 import {products, fetchProducts} from "../js/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { deliveryOptions } from "./delivery options.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 
+fetchOrders()
+  .then(()=> {
 
+  
 
 fetchProducts()
   .then(() => {
@@ -167,11 +170,24 @@ function addOrder () {
     })  
     console.log(order);
      
-    saveToOrdersStorage();     
+    saveToOrdersStorage(orders);     
     
 }
 
-
+var hghg =`      <table style="width: 100%; border-collapse: collapse">
+        <tr style="vertical-align: top">
+          <td style="padding: 24px 8px 0 4px; display: inline-block; width: max-content">
+            <img style="height: 64px" height="64px" src="{{image_url}}" alt="item" />
+          </td>
+          <td style="padding: 24px 8px 0 8px; width: 100%">
+            <div>{{name}}</div>
+            <div style="font-size: 14px; color: #888; padding-top: 4px">QTY: {{units}}</div>
+          </td>
+          <td style="padding: 24px 4px 0 0; white-space: nowrap">
+            <strong>{{price}}</strong>
+          </td>
+        </tr>
+      </table>`
 
 
 function times (){
@@ -199,12 +215,39 @@ console.log(deliverTime);
 );
 }
 
+let getProduct2
+let getCart2
+cart.forEach((cartItem) => {
+  products.forEach((product) => {
+    if(cartItem.productId === product.id){
+        getProduct2 = product
+    }
+  })
+})
+
+
+
+var templateParams = {
+  my_html: hghg,
+  email: 'duddystudio@gmail.com',
+  website_link: 'https://heartpoemsandsongs.onrender.com'
+};
+
+
 
 
 placeOrder.addEventListener('click', () => {
    times();
    addOrder();
-   saveToOrdersStorage(); 
+   saveToOrdersStorage(orders); 
+   emailjs.send('service_okwhtvf', 'template_cyfvyp7', templateParams).then(
+    (response) => {
+      console.log('SUCCESS!', response.status, response.text);
+    },
+    (error) => {
+      console.log('FAILED...', error);
+    },
+  );
 })
 
 
@@ -261,3 +304,8 @@ document.querySelector('.orderId')
   .catch((error) => {
     console.error("Error fetching products:", error);
   });
+
+})
+.catch((error) => {
+  console.error("Error fetching orders:", error);
+});
