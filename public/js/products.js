@@ -75,7 +75,7 @@ export function fetchProducts() {
    
    }
 
-   export function removeFromProducts (productId) {
+   export function removeFromProducts (productId, newProducts2) {
     const newProducts = [];
 
     products.forEach((product) => {
@@ -86,7 +86,7 @@ export function fetchProducts() {
 
     products = newProducts;
 
-    saveToProductsStorage();
+    saveToProductsStorage(newProducts2);
 
   }
 

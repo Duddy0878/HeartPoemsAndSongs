@@ -207,7 +207,7 @@ function addCategorys () {
 
   categorys.push(pushCate.value)
 
-  saveToCategorysStorage();
+  saveToCategorysStorage(categorys);
 }
 
 categorySelect();
@@ -421,7 +421,7 @@ document.querySelectorAll('.removeAdd')
   link.addEventListener('click',() => {
 
       const productId = link.dataset.removeId
-      removeFromProducts(productId);
+      removeFromProducts(productId, products);
 
 
       const container = 
