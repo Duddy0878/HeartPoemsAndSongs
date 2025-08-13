@@ -167,8 +167,9 @@ body::-webkit-scrollbar{
       }
       .left-text{
         padding-top: 10px;
+      
       }
-
+    
       .todayDate{
         margin-top: 5px;
         justify-self: center;

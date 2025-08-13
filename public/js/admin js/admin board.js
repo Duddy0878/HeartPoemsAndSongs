@@ -40,7 +40,7 @@ var x = setInterval(function () {
     
       let dateHtml =`` 
       if(window.innerWidth > 500){
-      dateHtml = `&emsp; &emsp;${dateString} &emsp; &emsp; ${am_pm} `
+      dateHtml = ` &emsp;${dateString} &emsp; &emsp; ${am_pm} `
       }
       else{
       dateHtml = `${smalldate}-${am_pm}`
